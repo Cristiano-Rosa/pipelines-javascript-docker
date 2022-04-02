@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cristianorosapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cristianorosapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: cristianorosapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cristianorosapipelinesjavascriptdocker 
+          image: beremyapp1acr.azurecr.io/cristianorosapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
